@@ -1,2 +1,31 @@
-Testing json to HTML conversion 
-Support #17288
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<p>= Object-Store REST API</p>
+<p>== Objects</p>
+<p>Represents the metatadata of the object held in the object store.</p>
+<p><code>POST /objects</code> <code>GET /objects/{id}</code> <code>PUT /objects/{id}</code></p>
+<p>include::getOneMetaDataJSONSchema.adoc[]</p>
+<p>== Objects (file)</p>
+<p>Uses https://tools.ietf.org/html/rfc2387[multipart] upload.</p>
+<p><code>PUT /objects/{id}/file</code></p>
+<p>== Managed Attributes Managed attributes are key/value pairs where the key can be dynamically created by users with admin privileges. Managed attributes can then be used by regular users and by filename parsing strategies.</p>
+<p><code>GET /managed-attributes</code></p>
+<p>== Filename Parsing</p>
+<p><code>GET /filename-strategy</code></p>
+<p>include::getOneFilenameMetadataStrategySchema.adoc[]</p>
+<p>Filename parsing is used to automatically extract managed attributes from a filename and a pre-registered 'strategy'. Strategies are regex based and can only match a single managed attribute in a filename.</p>
+<p><code>POST /filename_attributes_extraction</code></p>
+<p>Request:</p>
+<p>include::postFilenameMetadataRequestSchema.adoc[]</p>
+<p>Response:</p>
+<p>include::postFilenameMetadataResponseSchema.adoc[]</p>
+</body>
+</html>

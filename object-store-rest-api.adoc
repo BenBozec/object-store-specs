@@ -1,0 +1,45 @@
+= Object-Store REST API 
+
+== Objects
+
+Represents the metatadata of the object held in the object store.
+
+`POST /objects`
+`GET /objects/{id}`
+`PUT /objects/{id}`
+
+include::getOneMetaDataJSONSchema.adoc[]
+
+== Objects (file)
+
+Uses https://tools.ietf.org/html/rfc2387[multipart] upload.
+
+`PUT /objects/{id}/file`
+
+== Managed Attributes
+Managed attributes are key/value pairs where the key can be dynamically created by users with admin privileges. Managed attributes can then be used by regular users
+and by filename parsing strategies.
+
+`GET /managed-attributes`
+
+
+== Filename Parsing
+
+
+`GET /filename-strategy`
+
+include::getOneFilenameMetadataStrategySchema.adoc[]
+
+Filename parsing is used to automatically extract managed attributes from a filename and a pre-registered 'strategy'. Strategies are regex based
+and can only match a single managed attribute in a filename.
+
+`POST /filename_attributes_extraction`
+
+Request:
+
+include::postFilenameMetadataRequestSchema.adoc[]
+
+Response:
+
+include::postFilenameMetadataResponseSchema.adoc[]
+

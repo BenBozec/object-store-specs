@@ -1,0 +1,39 @@
+== The managed attributes schema 
+
+The managed attributes for the media metadata
+
+.Properties
+|===
+|Name |Type |Description|Required?
+
+|id
+|string
+|ref to the identifier of the attribute
+|X
+
+|type
+|managedAttribute
+|None
+|X
+|===
+.Attributes
+|===
+|Name |Type |Description|Required?
+
+|name
+|string
+|ref to the name of the managed attribute
+|X
+
+|managedAttributeType
+|['integer', 'string']
+|ref to the type of the managed attribute
+|X
+
+|acceptedValues
+|array
+|ref to the accepted values of the named attribute if any
+|
+|===
+
+
