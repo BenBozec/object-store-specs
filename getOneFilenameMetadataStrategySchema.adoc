@@ -1,0 +1,39 @@
+== The filename metadata strategy schema 
+
+Schema representing the filename metadata extraction strategy.
+
+.Properties
+|===
+|Name |Type |Description|Required?
+
+|id
+|integer
+|Identifier of the strategy. Server generated.
+|X
+
+|type
+|strategy
+|None
+|X
+|===
+.Attributes
+|===
+|Name |Type |Description|Required?
+
+|strategyName
+|string
+|Name of the strategy.
+|X
+
+|regex
+|string
+|Pattern as Regex used to parse file name.
+|X
+
+|targets
+|array
+|None
+|X
+|===
+
+
